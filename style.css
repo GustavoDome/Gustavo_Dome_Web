@@ -1,0 +1,235 @@
+/* ===========================================
+IMPORTACIÓN DE FUENTES
+=========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Dancing+Script:wght@600&display=swap');
+
+/* ===========================================
+RESET GENERAL Y ESTILOS BÁSICOS
+=========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye el padding y el border dentro del ancho total */
+}
+   
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces de anclaje */
+}
+   
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #DFF2EB; /* Fondo claro para contraste */
+    color: #4A628A; /* Color de texto principal */
+}
+   
+/* ===========================================
+TIPOGRAFÍA Y ENLACES
+=========================================== */
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+   
+li a {
+    color: #B9E5E8;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+   
+li a:hover {
+    color: #ffffff;
+}
+   
+p a {
+    text-decoration: none;
+    color: #4A628A;
+}
+   
+p a:hover {
+    color: black;
+}
+   
+/* ===========================================
+ENCABEZADO (HEADER)
+=========================================== */
+header {
+    background-color: #4A628A;
+    color: #B9E5E8;
+    padding: 20px;
+}
+   
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Playball', cursive;
+    font-style: normal;
+}
+   
+/* ===========================================
+SECCIONES GENERALES
+=========================================== */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #B9E5E8;
+    border-radius: 8px;
+}
+   
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Playball', cursive;
+    font-style: italic;
+}
+   
+/* ===========================================
+SECCIÓN "SOBRE MÍ"
+=========================================== */
+.contenedor_sobre_mi {
+    display: flex;
+    justify-content: space-between;
+}
+   
+.imagen_perfil {
+    width: 150px;
+    height: auto;
+    border-radius: 20px; /* Bordes redondeados para la imagen */
+}
+   
+/* ===========================================
+PROYECTOS
+=========================================== */
+.proyecto {
+    margin-bottom: 15px;
+}
+   
+.proyecto h3 {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+   
+/* ===========================================
+NAVEGACIÓN Y MENÚ
+=========================================== */
+nav ul {
+    text-align: center;
+}
+   
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+   
+.menu {
+    display: block;
+    text-align: center;
+}
+   
+/* ===========================================
+PIE DE PÁGINA (FOOTER)
+=========================================== */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4A628A;
+    color: #B9E5E8;
+    margin-top: 20px;
+}
+   
+/* ===========================================
+ICONOS
+=========================================== */
+.icono-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+   
+/* ===========================================
+ELEMENTOS PARA DISPOSITIVOS MÓVILES
+=========================================== */
+.margen_celular {
+    display: none;
+}
+
+/* Icono menú hamburguesa para pantallas chicas */
+.menu_hamburgesa {
+    display: none;
+}
+    
+label[for="menu-toggle"] {
+    display: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    text-align: right;
+    flex-direction: column;
+}
+    
+@media (max-width: 768px) { /* Query para las tablets */
+    .menu {
+        display: none; /* Oculta el menú clásico en pantallas pequeñas */
+    }
+   
+    label[for="menu-toggle"] {
+        display: block;
+        flex-direction: column;
+    }
+   
+    .menu_hamburgesa:checked ~ .margen_celular {
+        display: block;
+    }
+   
+    .margen_navegacion_celular {
+        display: flex;
+        flex-direction: column;
+        color: #B9E5E8;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    .imagen_perfil {
+        width: 130px;
+    }
+    
+}
+
+@media (max-width: 480px) { /* Query para los celulares*/
+    .menu {
+        display: none; /* Oculta el menú clásico en pantallas pequeñas */
+    }
+
+    label[for="menu-toggle"] {
+        display: block;
+        flex-direction: column;
+    }
+
+    .menu_hamburgesa:checked ~ .margen_celular {
+        display: block;
+    }
+
+    .margen_navegacion_celular {
+
+        display: flex;
+        flex-direction: column;
+        color: #B9E5E8;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .contenedor_sobre_mi {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .imagen_perfil {
+        width: 100px;
+        height: auto;
+        transform: translate(+230%);
+        border-radius: 20px; /* Bordes redondeados para la imagen */
+    }
+}
