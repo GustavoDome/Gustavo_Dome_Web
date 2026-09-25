@@ -100,18 +100,41 @@ SECCIÓN "SOBRE MÍ"
 }
    
 /* ===========================================
-PROYECTOS
+Experiencia Laboral
 =========================================== */
-.proyecto {
+.ExperienciasLaborales {
     margin-bottom: 15px;
 }
    
-.proyecto h3 {
+.ExperienciasLaborales h3 {
     font-size: 1.5rem;
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
 }
-   
+
+.ExperienciaLaboral {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+ 
+/* ===========================================
+Estudios
+=========================================== */
+.Estudios {
+    margin-bottom: 15px;
+}
+
+.Estudios h3 {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+.Estudio {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
 /* ===========================================
 NAVEGACIÓN Y MENÚ
 =========================================== */
